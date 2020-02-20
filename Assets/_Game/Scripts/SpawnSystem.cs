@@ -21,7 +21,6 @@ public class SpawnSystem : MonoBehaviour
             SpawnAsteroid();
             delay = spawnDelay;
         }
-        Debug.Log(delay);
     }
 
     private void SpawnAsteroid(){
