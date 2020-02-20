@@ -21,6 +21,7 @@ public class Asteroid : MonoBehaviour
 
     private void OnCollisionEnter(Collision col){
         if(col.transform.CompareTag("Projectile")){
+            Destroy(col.gameObject);
             Destroy(gameObject);
         }else if(col.transform.CompareTag("Planet")){
             GameObject.Find("Root").GetComponent<GameController>().Reload();

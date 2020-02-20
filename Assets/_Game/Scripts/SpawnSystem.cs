@@ -2,6 +2,9 @@
 
 public class SpawnSystem : MonoBehaviour
 {
+
+    static public SpawnSystem instance;
+
     [SerializeField]
     private float spawnDelay;
     [SerializeField]
@@ -12,6 +15,7 @@ public class SpawnSystem : MonoBehaviour
     private float delay;
 
     private void Awake(){
+        instance = this;
         delay = spawnDelay;
     }
 
