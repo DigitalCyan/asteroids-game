@@ -5,6 +5,8 @@ public class Asteroid : MonoBehaviour
 
     [SerializeField]
     private float speed;
+    [SerializeField]
+    private GameObject explosion;
 
     private Vector3 dir;
 
@@ -22,6 +24,7 @@ public class Asteroid : MonoBehaviour
     private void OnCollisionEnter(Collision col){
         if(col.transform.CompareTag("Projectile")){
             Destroy(col.gameObject);
+            Instantiate(explosion,transform.position, transform.rotation);
             Destroy(gameObject);
         }else if(col.transform.CompareTag("Planet")){
             GameObject.Find("Root").GetComponent<GameController>().Reload();
