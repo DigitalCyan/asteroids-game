@@ -7,6 +7,10 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private Transform UIRoot;
 
+    private void Awake(){
+        Cursor.visible = false;
+    }
+
     private void Update(){
         if(Input.GetButtonDown("Start")){
             SpawnSystem.instance.enabled = true;
