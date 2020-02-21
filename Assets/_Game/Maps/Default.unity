@@ -151,8 +151,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1605978305}
   - {fileID: 1489575641}
+  - {fileID: 1605978305}
   m_Father: {fileID: 963194228}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4986,6 +4986,7 @@ GameObject:
   - component: {fileID: 265981786}
   - component: {fileID: 265981787}
   - component: {fileID: 265981788}
+  - component: {fileID: 265981789}
   m_Layer: 0
   m_Name: Root
   m_TagString: Untagged
@@ -5040,6 +5041,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIRoot: {fileID: 104535411}
+  planet: {fileID: 725258166}
+  playerRoot: {fileID: 1455464880}
+  explosionPrefab: {fileID: 924639698582376289, guid: 68644507ac5861841af249232071e407,
+    type: 3}
+--- !u!81 &265981789
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265981785}
+  m_Enabled: 1
 --- !u!1 &524047424
 GameObject:
   m_ObjectHideFlags: 0
@@ -5050,6 +5063,7 @@ GameObject:
   m_Component:
   - component: {fileID: 524047425}
   - component: {fileID: 524047426}
+  - component: {fileID: 524047427}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -5087,6 +5101,102 @@ MonoBehaviour:
   projectilePrefab: {fileID: 852914662674102002, guid: af860be59891a7a439d2e92c459302ce,
     type: 3}
   offset: 0.3
+--- !u!82 &524047427
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524047424}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 199498de29da2dc428f7681f100c23b5, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -5594,7 +5704,6 @@ GameObject:
   - component: {fileID: 1397054947}
   - component: {fileID: 1397054949}
   - component: {fileID: 1397054948}
-  - component: {fileID: 1397054950}
   m_Layer: 0
   m_Name: Planet Gfx
   m_TagString: Planet
@@ -5663,14 +5772,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1397054946}
   m_Mesh: {fileID: 4151621958628188828, guid: 199f6454853da9645a5d96c1c108f1ae, type: 3}
---- !u!81 &1397054950
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397054946}
-  m_Enabled: 1
 --- !u!1 &1455464880
 GameObject:
   m_ObjectHideFlags: 0
@@ -5729,7 +5830,7 @@ GameObject:
   - component: {fileID: 1489575643}
   - component: {fileID: 1489575642}
   m_Layer: 0
-  m_Name: Play (1)
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5747,7 +5848,7 @@ RectTransform:
   m_LocalScale: {x: 6.333998, y: 6.333998, z: 6.333998}
   m_Children: []
   m_Father: {fileID: 104535411}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6031,7 +6132,7 @@ RectTransform:
   m_LocalScale: {x: 4.2728, y: 4.2728, z: 4.2728}
   m_Children: []
   m_Father: {fileID: 104535411}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

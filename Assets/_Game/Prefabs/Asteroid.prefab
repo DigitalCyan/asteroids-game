@@ -4768,7 +4768,7 @@ GameObject:
   - component: {fileID: 3950084630583560264}
   m_Layer: 0
   m_Name: Asteroid
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4814,7 +4814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.15
-  explosion: {fileID: 924639698582376289, guid: 68644507ac5861841af249232071e407,
+  explosion: {fileID: 924639698582376289, guid: 004cf16e70e7ddd4ba22a467e5e14b22,
     type: 3}
 --- !u!54 &3950084630583560264
 Rigidbody:

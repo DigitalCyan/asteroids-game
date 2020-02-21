@@ -27,7 +27,12 @@ public class Asteroid : MonoBehaviour
             Instantiate(explosion,transform.position, transform.rotation);
             Destroy(gameObject);
         }else if(col.transform.CompareTag("Planet")){
-            GameObject.Find("Root").GetComponent<GameController>().Reload();
+            GameController.instance.GameOver();
         }
+    }
+
+    public void BlowUp(){
+        Instantiate(explosion,transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 }
