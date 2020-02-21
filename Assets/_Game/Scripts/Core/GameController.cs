@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
         }
         Destroy(planet);
         Destroy(playerRoot);
-        StartCoroutine(EndgameTimer(5));
+        StartCoroutine(EndgameTimer(3));
         StartCoroutine(RumbleHandler.Rumble(0, 0));
     }
 
