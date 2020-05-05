@@ -14,10 +14,9 @@ public class Fire : MonoBehaviour
     }
 
     private void Update(){
-        if(Input.GetButtonDown("Fire1")){
+        if(Input.GetMouseButtonDown(0)){
             a.PlayOneShot(a.clip);
             Instantiate(projectilePrefab, transform.position + transform.up * offset, transform.rotation);
-            StartCoroutine(RumbleHandler.Rumble(0.1f, 0.5f));
         }
     }
 

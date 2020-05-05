@@ -5542,7 +5542,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1166877909}
-  - component: {fileID: 1166877910}
   m_Layer: 0
   m_Name: Cam Root
   m_TagString: Untagged
@@ -5565,20 +5564,6 @@ Transform:
   m_Father: {fileID: 265981786}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1166877910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1166877908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef91fb7dab6c3684599e44bb9fd6201f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tilt: 30
-  smoothMulti: 5
 --- !u!1 &1250355252
 GameObject:
   m_ObjectHideFlags: 0
@@ -5817,7 +5802,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 180
-  deadzone: 0.5
 --- !u!1 &1489575640
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
     }
 
     private void Update(){
-        if(Input.GetButtonDown("Start")){
+        if(Input.GetKeyDown(KeyCode.Space)){
             SpawnSystem.instance.enabled = true;
             Destroy(UIRoot.gameObject);
         }
@@ -38,7 +38,6 @@ public class GameController : MonoBehaviour
         Destroy(planet);
         Destroy(playerRoot);
         StartCoroutine(EndgameTimer(3));
-        StartCoroutine(RumbleHandler.Rumble(0, 0));
     }
 
     private IEnumerator EndgameTimer(float t){
